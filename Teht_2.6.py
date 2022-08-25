@@ -1,7 +1,4 @@
-#Ope vihje
-#import_random
-#x = random.randint(0, 9)
-#print(x)
+
 import random
 x =  random.randint(0,9)
 x2 = random.randint(0,9)
