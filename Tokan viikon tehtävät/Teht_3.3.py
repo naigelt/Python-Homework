@@ -20,10 +20,10 @@ elif gender == "mies":
       print("Hemoglobiini arvo on alhainen.")
   if hg_value <= 195:
      print("Hemoglobiini arvo on normaali.")
-    #TODO: Miehen arvot
+
 else:
      print("Hemoglobiini arvo on korkea.")
 
-    #TODO: tulosta virheilmoitus(?)
+
 
 
