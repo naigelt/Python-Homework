@@ -5,4 +5,4 @@ if year % 400 == 0.0 and year % 100 == 0.0:
 elif  year % 4 == 0 and year % 100 != 0:
     print(f"{year} on karkausvuosi")
 else:
-    print(f"{Year} ei ole karkausvuosi")
+    print(f"{year} ei ole karkausvuosi")
