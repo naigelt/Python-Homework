@@ -6,3 +6,5 @@ inches = float(input("Anna tuuma numero kokonaislukuna.Negatiivinen luku lopetta
 while inches >= 0:
     print(inches * 2.54)
     inches = float(input("Anna tuuma numero kokonaislukuna. Negatiivinen luku lopettaa ohjelman "))
+else:
+    print("End of program")
