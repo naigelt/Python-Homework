@@ -1,12 +1,12 @@
-hytti_luokka = input("Anna hytti luokkasi ")
-
-if hytti_luokka == "LUX":
+hytti = input("Anna hytti luokkasi ")
+hytti = hytti.lower()
+if hytti == "LUX":
     print("LUX on parvekkeellinen hytti yläkannella.")
-elif hytti_luokka == "A":
+elif hytti == "A":
     print("A on ikkunallinen hytti autokannen yläpuolella.")
-elif hytti_luokka == "B":
+elif hytti == "B":
     print("B on ikkunaton hytti autokannen yläpuolella.")
-elif hytti_luokka == "C":
+elif hytti == "C":
     print("C on ikkunaton hytti autokannen alapuolella.")
 else :
     print("Virheellinen hyttiluokka.")

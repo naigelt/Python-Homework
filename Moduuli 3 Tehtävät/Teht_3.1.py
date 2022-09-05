@@ -1,4 +1,3 @@
-
 kuha = float(input("Anna kuhan pituus senttimetreinä "))
 full_lenght = 37
 if kuha<37:

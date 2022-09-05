@@ -2,7 +2,7 @@
 # kunnes tämä syöttää tyhjän merkkijonon lopetusmerkiksi.
 # Lopuksi ohjelma tulostaa saaduista luvuista pienimmän ja suurimman.
 
-UI = input('Anna luku. Ohjelma loppuu, kun annat tyhjän merkkijonon: ')
+UI = input("Anna luku. Ohjelma loppuu, kun annat tyhjän merkkijonon: ")
 lowest_num = 0
 highest_num = 0
 index = 0
