@@ -4,10 +4,10 @@
 # käytä for-toistorakennetta nimien kysymiseen ja for/in toistorakennetta niiden läpikäymiseen
 
 city_names = []
-for number in range(5):
-    input("Give a cityname: ")
-    city_names.append(city_name)
 
-    for city_name in city_names:
+for number in range(5):
+    city_names.append(input("Give a cityname: "))
+
+for city_name in city_names:
         print(f"{city_name}.")
 
