@@ -5,5 +5,7 @@ def sumOfList(list, size):
         return 0
     else:
         return list[size-1] + sumOfList(list, size-1)
-total = sumOfList(list1, len(list1))
-print("Sum of all elements in the given list: ", total)
+def main():
+ total = sumOfList(list1, len(list1))
+ print("Sum of all elements in the given list: ", total)
+main()
