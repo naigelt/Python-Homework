@@ -7,15 +7,17 @@ def pizza_price(diameter, price):
     return price / area
 
 print("Welcome to the Python Pizza Price Price-calculator")
-diam = float(input("What is the diameter of the pizza? "))
+diam = float(input("What is the diameter of the pizza in cm: "))
 price = float(input("What is the price of the pizza? "))
 pizza1 = pizza_price(diam, price)
 
-diam = float(input("What is the diameter of the pizza? "))
+diam = float(input("What is the diameter of the pizza in cm: "))
 price = float(input("What is the price of the pizza? "))
 pizza2 = pizza_price(diam, price)
 
 if pizza1 > pizza2:
     print("Pizza 2 is cheaper.")
+elif pizza1 == pizza2:
+    print("They are the same value")
 else:
     print("Pizza 1 is cheaper.")

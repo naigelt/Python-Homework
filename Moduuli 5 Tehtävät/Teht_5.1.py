@@ -7,5 +7,3 @@ for cubes in range(cubes):
     sum += x
 
 print(f"Total sum is {sum}")
-
-

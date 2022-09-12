@@ -6,7 +6,7 @@ def pruner(lst):
     return result_list
 
 def main():
-    lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    lst = [1, 22, 3, 44, 5, 6, 66, 67, 55, 113]
     even = pruner(lst)
     print(lst)
     print(even)
