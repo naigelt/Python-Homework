@@ -1,34 +1,33 @@
 def Choose():
-    print("1 - syötä uusi")
-    print("2 - haku")
-    print("0 - lopetus")
-    valinta = -1
-    while valinta < 0 or valinta > 2:
-        valinta = int(input("Valitse: "))
-    return valinta
+    print("1 - Enter a new one")
+    print("2 - Search")
+    print("0 - Stop")
+    choice = -1
+    while choice < 0 or choice > 2:
+        choice = int(input("Choose: "))
+    return choice
 
-# Lisää uuden lentoaseman annettuun sanakirjaan.
-def Add(asemat):
-    icao = input("Aseman ICAO-koodi : ")
-    nimi = input("Aseman nimi       : ")
-    asemat[icao] = nimi
+# Add a new one to the dictionary
+def Add(airports):
+    icao = input("Airports ICAO-code : ")
+    name = input("Ports name       : ")
+    airports[icao] = name
 
-# Tulostaa halutun aseman annetusta sanakirjasta.
-def Search(asemat):
-    ICAO = input("Aseman ICAO-koodi : ")
-    if ICAO in asemat:
-        print(asemat[ICAO])
+# Prints any given airport from the dictionary
+def Search(airports):
+    ICAO = input("Airports ICAO-code : ")
+    if ICAO in airports:
+        print(airports[ICAO])
     else:
-        print("Tuntematon ICAO-koodi")
-# Pääohjelma
-#
-lentoasemat = {}
-valinta = Choose()
-while valinta != 0:
-    if valinta == 1:
-        Add(lentoasemat)
-    elif valinta == 2:
-        Search(lentoasemat)
-    valinta = Choose()
+        print("Unknown ICAO-code")
+# Main
+airports = {}
+choice = Choose()
+while choice != 0:
+    if choice == 1:
+        Add(airports)
+    elif choice == 2:
+        Search(airports)
+    choice = Choose()
 
 
