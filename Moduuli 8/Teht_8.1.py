@@ -8,7 +8,6 @@ connection = mysql.connector.connect(
     password="",
     autocommit=True
 )
-#Määritellään kysely j
 
 ICAO = input("Anna lentokentän ICAO-Koodi : ")
 sql = "SELECT name, municipality FROM airport WHERE ident = '" +ICAO + "'"
