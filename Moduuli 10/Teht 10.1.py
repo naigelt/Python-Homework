@@ -10,8 +10,8 @@
 
 class Elevator:
 
-    def __init__(self, first_floor, top_floor):
-        self.firs_floor = first_floor
+    def __init__(self, first_floor, top_floor, current_floor):
+        self.first_floor = first_floor
         self.top_floor = top_floor
         self.current_floor = first_floor
 
@@ -23,14 +23,21 @@ class Elevator:
     def move_to_floor(self, floor):
         if self.first_floor < floor > self.top_floor:
             self.curret_floor = floor
-        elif
+        elif floor < 0:
+            self.current_floor = 0
+        else:
+            self.current_floor = 10
 
-    def floor_up(self, floor):
-        if self.current_floor < floor:
+    def floor_up(self):
+        if self.current_floor < 10:
             self.current_floor = self.current_floor +1
 
-    def floor_down(self,floor):
-        if self.current_floor > floor:
+    def floor_down(self):
+        if self.current_floor > 0:
             self.current_floor > self.current_floor -1
 
+elevator = Elevator(1, 10, 0)
+Elevator.info(elevator)
+elevator.floor_up()
+Elevator.info(elevator)
 
