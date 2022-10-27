@@ -34,10 +34,12 @@ class Elevator:
 
     def floor_down(self):
         if self.current_floor > 0:
-            self.current_floor > self.current_floor -1
+            self.current_floor -= 1
 
 elevator = Elevator(1, 10, 0)
 Elevator.info(elevator)
 elevator.floor_up()
+Elevator.info(elevator)
+elevator.floor_down()
 Elevator.info(elevator)
 
