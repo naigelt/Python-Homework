@@ -25,7 +25,8 @@ class Building:
         print(f"Riding elevator number {elevator_number}")
         elevator.move_to_floor(elevator_floor)
 
-class Elevator(Building):
+
+class Elevator:
 
     def __init__(self, first_floor, top_floor):
         self.first_floor = first_floor
@@ -47,14 +48,14 @@ class Elevator(Building):
         while self.floor != target_floor:
             if target_floor > self.floor:
                 self.floor_up()
-                print(self.floor)
+                print(f"Floor number{self.floor}")
             else:
                 self.floor_down()
-                print(self.floor)
+                print(f"Floor number{self.floor}")
 
 if __name__ == '__main__':
     building = Building(1, 6, 3)
     building.info()
+    building.run_elevator(1, 3)
 
-    building.run_elevator(2, 3)
 
