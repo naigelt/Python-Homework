@@ -9,11 +9,12 @@ class Car:
         self.kms_travelled = 0
 
 
-    def info(self,):
-        print("Your cars registration", self.registration, "\nYour cars top speed ", self.top_speed, "Km/h","\nYour cars current speed", self.speed, "Km/h", "\nKilometeres travelled", self.kms_travelled, "Km""\n")
+    def info(self):
+        print("Your cars registration", self.registration, "\nYour cars top speed ", self.top_speed,
+              "Km/h","\nYour cars current speed", self.speed, "Km/h", "\nKilometeres travelled", self.kms_travelled, "Km""\n")
 
 
-    def accelerate(self ,change_speed):
+    def accelerate(self, change_speed):
         if 0 < self.speed + change_speed <= self.top_speed:
             self.speed = self.speed + change_speed
         elif self.speed + change_speed <= 0:
