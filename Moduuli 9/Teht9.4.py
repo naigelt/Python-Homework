@@ -5,23 +5,28 @@ class Car:
     def __init__(self, registration, top_speed,):
         self.registration = registration
         self.top_speed = top_speed
-        self.current_speed = 0
+        self.speed = 0
         self.kms_travelled = 0
+        self.travel_hours = 0
 
     def info(self,):
-        print("Your cars registration", self.registration, "\nYour cars top speed ", self.top_speed, "Km/h","\nYour cars current speed", self.current_speed, "Km/h" ,"\nKilometeres travelled", self.kms_travelled, "Km""\n")
+        print("Your cars registration", self.registration, "\nYour cars top speed ", self.top_speed, "Km/h","\nYour cars current speed", self.speed, "Km/h", "\nKilometeres travelled", self.kms_travelled, "Km""\n")
 
 
     def accelerate(self ,change_speed):
-        if 0 < self.current_speed + change_speed <= self.top_speed:
-            self.current_speed = self.current_speed + change_speed
-        elif self.current_speed + change_speed <= 0:
-            self.current_speed = 0
+        if 0 < self.speed + change_speed <= self.top_speed:
+            self.speed = self.speed + change_speed
+        elif self.speed + change_speed <= 0:
+            self.speed = 0
         else:
-            self.current_speed = self.top_speed
+            self.speed = self.top_speed
 
     def traveling(self, change_speed):
-        self.kms_travelled = self.kms_travelled + self.current_speed * change_speed
+        self.kms_travelled = self.kms_travelled + self.speed * change_speed
+
+    def travel_distance(self, hours):
+        self.kms_travelled = self.kms_travelled + (self.speed * hours)
+        self.travel_hours = self.travel_hours + hours
 
 def car_making():
     cars = []
