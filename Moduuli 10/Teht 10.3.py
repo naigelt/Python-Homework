@@ -1,5 +1,5 @@
-#Jatka edellisen tehtävän ohjelmaa siten, että Talo-luokassa on parametriton metodi palohälytys, joka käskee kaikki hissit pohjakerrokseen.
-#Jatka pääohjelmaa siten, että talossasi tulee palohälytys.
+ # Jatka edellisen tehtävän ohjelmaa siten, että Talo-luokassa on parametriton metodi palohälytys, joka käskee kaikki hissit pohjakerrokseen.
+ # Jatka pääohjelmaa siten, että talossasi tulee palohälytys.
 
 class Building:
 
@@ -8,7 +8,7 @@ class Building:
         self.top_floor = top_floor
         self.elevators = []
         self.elevator_number = elevator_number
-        for i in range(elevator_number):
+        for i in range(elevator_number+1):
             self.elevators.append(Elevator(first_floor, top_floor))
 
     def info(self):
@@ -25,8 +25,6 @@ class Building:
         for i in self.elevators:
             i.move_to_floor(i.first_floor)
         print("All elevators are in the first floor")
-
-
 
 class Elevator:
 
@@ -63,4 +61,3 @@ if __name__ == '__main__':
     building.run_elevator(3, 5)
     building.fire_alarm()
     building.info()
-

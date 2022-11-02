@@ -6,8 +6,6 @@
 # Testaa luokkaa siten, että teet pääohjelmassa hissin ja käsket sen siirtymään haluamaasi kerrokseen
 # ja sen jälkeen takaisin alimpaan kerrokseen.
 
-
-
 class Elevator:
 
     def __init__(self, first_floor, top_floor):

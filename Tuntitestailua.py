@@ -1,21 +1,34 @@
-rahaa_taskussa =  int(input("Paljonko sinulla on rahaa? "))
-maistuuko_kahvi = input("Maistuuko kahvi? ")
-laten_hinta =  5
-kahvin_hinta = 3
-teen_hinta  = 2
-if rahaa_taskussa >= laten_hinta and maistuuko_kahvi == "joo":
-    print("Ostan latte")
-    print("Juon latte")
-    rahaa_taskussa = rahaa_taskussa - laten_hinta
-elif rahaa_taskussa >= kahvin_hinta and maistuuko_kahvi == "joo":
-    print("ostan normikahvi")
-    rahaa_taskussa = rahaa_taskussa - kahvin_hinta
-elif rahaa_taskussa >= teen_hinta:
-    print("otan teen")
-else:
-    print("Lähden kotiin")
 
-if rahaa_taskussa == 0:
-    print("Rahat loppu")
-else:
-    print(f"Sinulla on vielä {rahaa_taskussa} euroa taskussa")
+class Elevator:
+
+    def __init__(self, first_floor, top_floor):
+        self.first_floor = first_floor
+        self.top_floor = top_floor
+        self.floor = first_floor
+
+    def info(self):
+        print(f"Buildings first floor: {self.first_floor}\n")
+        print(f"Buildings top floor: {self.top_floor}\n")
+        print(f"The current floor you are on: {self.floor}\n")
+
+    def floor_up(self):
+        self.floor += 1
+
+    def floor_down(self):
+        self.floor -= 1
+
+    def move_to_floor(self, target_floor):
+        while self.floor != target_floor:
+            if target_floor > self.floor:
+                self.floor_up()
+                print(self.floor)
+            else:
+                self.floor_down()
+                print(self.floor)
+
+
+elevator = Elevator(1, 10)
+elevator.move_to_floor(5)
+elevator.info()
+elevator.move_to_floor(elevator.first_floor)
+elevator.info()
