@@ -22,7 +22,7 @@ class Book(Publish):
 
     def print_info(self):
         super().print_info()
-        print(f" The writes is {self.writer}, and it has {self.pages} pages.")
+        print(f" The writer is {self.writer}, and it has {self.pages} pages.")
 
 class Magazine(Publish):
 
